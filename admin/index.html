@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+    body {
+        display: none;
+    }
+</style>
+
+</head>
+
+<body>
+    <div data-shell="admin" data-title="Admin Console"></div>
+    <main class="container">
+        <h1 class="page-title">Welcome, <span id="admin-name">Admin</span></h1>
+        <p class="muted">System at a glance.</p>
+        <div class="stat-row" id="admin-stats"></div>
+
+        <div class="grid-3">
+            <a class="card link-card" href="courses.html">
+                <h3>Manage courses</h3>
+                <p class="muted">Add, edit, or delete courses in the catalog.</p>
+            </a>
+            <a class="card link-card" href="prerequisites.html">
+                <h3>Manage prerequisites</h3>
+                <p class="muted">Configure prerequisite chains.</p>
+            </a>
+            <a class="card link-card" href="overview.html">
+                <h3>Registration overview</h3>
+                <p class="muted">Monitor enrollment and fill rates.</p>
+            </a>
+            <a class="card link-card" href="registrations.html">
+                <h3>Student registrations</h3>
+                <p class="muted">See which students are enrolled in each course.</p>
+            </a>
+        </div>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+
+</html>

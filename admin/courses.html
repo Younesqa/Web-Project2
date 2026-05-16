@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Courses</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="admin" data-title="Admin Console"></div>
+    <main class="container">
+        <header class="page-head">
+            <div>
+                <h1 class="page-title">Manage courses</h1>
+                <p class="muted">Add, edit, or remove courses from the catalog.</p>
+            </div>
+            <button class="btn btn-primary" id="add-course-btn">+ Add new course</button>
+        </header>
+
+        <section class="card table-card">
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Instructor</th>
+                            <th>Schedule</th>
+                            <th>Credits</th>
+                            <th>Capacity</th>
+                            <th>Dept</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="course-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal hidden" id="course-modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel">
+            <header class="modal-head">
+                <h3 id="modal-title">Add course</h3>
+                <button class="icon-btn" data-close aria-label="Close">×</button>
+            </header>
+            <form id="course-form" class="modal-body">
+                <div class="grid-2">
+                    <div class="field"><label>Code</label><input name="course_code" required></div>
+                    <div class="field"><label>Name</label><input name="title" required></div>
+                    <div class="field"><label>Instructor</label><input name="instructor" required></div>
+                    <div class="field"><label>Schedule</label><input name="schedule_info" placeholder="MWF 9:00–9:50"
+                            required></div>
+                    <div class="field"><label>Credits</label><input name="credits" type="number" min="1" max="6"
+                            required></div>
+                    <div class="field"><label>Capacity</label><input name="capacity" type="number" min="1" required>
+                    </div>
+                    <div class="field">
+                        <label>Department</label>
+                        <select name="department" required>
+                            <option value="CS">CS</option>
+                            <option value="MATH">MATH</option>
+                            <option value="ENG">ENG</option>
+                            <option value="PHYS">PHYS</option>
+                            <option value="BUS">BUS</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Semester</label>
+                        <select name="semester" required>
+                            <option>Fall 2025</option>
+                            <option>Spring 2026</option>
+                        </select>
+                    </div>
+                    <div class="field span-2">
+                        <label>Description</label>
+                        <textarea name="description" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-foot">
+                    <button type="button" class="btn btn-ghost" data-close>Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="save-course-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="confirm-modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel sm">
+            <header class="modal-head">
+                <h3>Confirm</h3>
+            </header>
+            <div class="modal-body">
+                <p id="confirm-text"></p>
+            </div>
+            <div class="modal-foot">
+                <button class="btn btn-ghost" data-close>Cancel</button>
+                <button class="btn btn-danger" id="confirm-yes">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/admin-courses.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in — Student Course Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="auth-body">
+    <div class="bg-blob blob-tr"></div>
+    <div class="bg-blob blob-bl"></div>
+
+    <div class="auth-wrap">
+        <section class="hero">
+            <span class="pill"><span class="dot"></span> Fall 2025 registration is open</span>
+            <h1>Plan your <span class="grad-text">semester</span> with confidence.</h1>
+            <p class="muted">Browse the catalog, register for classes, and track your prerequisites — all in one place.
+            </p>
+            <div class="stat-grid">
+                <div class="stat-tile">
+                    <p class="stat-num">120+</p>
+                    <p class="muted small">Courses</p>
+                </div>
+                <div class="stat-tile">
+                    <p class="stat-num">12</p>
+                    <p class="muted small">Departments</p>
+                </div>
+                <div class="stat-tile">
+                    <p class="stat-num">8.4k</p>
+                    <p class="muted small">Students</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card auth-card">
+            <header class="auth-head">
+                <div class="logo-badge">🏫</div>
+                <div>
+                    <h2>Sign in</h2>
+                    <p class="muted small">Choose your role to continue</p>
+                </div>
+            </header>
+
+            <div class="role-switch" role="tablist">
+                <button type="button" class="role-btn is-active" data-role="student">👨🏻‍🎓 Student</button>
+                <button type="button" class="role-btn" data-role="admin">👨🏻‍💼 Admin</button>
+            </div>
+
+            <form id="login-form" novalidate>
+                <div class="field">
+                    <label for="username">Email</label>
+                    <input id="username" name="username" type="email" placeholder="you@ppu.edu.ps" autocomplete="email">
+                    <p class="error" data-error="username"></p>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password">
+                    <p class="error" data-error="password"></p>
+                </div>
+                <div class="alert hidden" id="login-alert"></div>
+                <button class="btn btn-primary btn-block" type="submit" id="login-submit">Sign in</button>
+                <p class="muted xsmall center">
+                    Enter your university email and password
+                </p>
+            </form>
+        </section>
+    </div>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="js/store.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Overview</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="admin" data-title="Admin Console"></div>
+    <main class="container">
+        <h1 class="page-title">Registration overview</h1>
+        <p class="muted">Monitor enrollment and identify popular courses.</p>
+
+        <div class="stat-row" id="ov-stats"></div>
+
+        <section class="card">
+            <div class="filter-grid">
+                <div class="field">
+                    <label for="ov-dept">Department</label>
+                    <select id="ov-dept">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="ov-sem">Semester</label>
+                    <select id="ov-sem">
+                        <option value="">All</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Registered</th>
+                            <th>Capacity</th>
+                            <th>Fill</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ov-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/admin-overview.js"></script>
+</body>
+
+</html>

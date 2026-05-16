@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browse Courses</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="student" data-title="Student Portal"></div>
+    <main class="container">
+        <h1 class="page-title">Course catalog</h1>
+        <p class="muted">Search and filter, then register if you meet the prerequisites.</p>
+
+        <section class="card filter-card">
+            <div class="filter-grid">
+                <div class="field">
+                    <label for="q">Search</label>
+                    <input id="q" placeholder="Course name or code…">
+                </div>
+                <div class="field">
+                    <label for="f-dept">Department</label>
+                    <select id="f-dept">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="f-sem">Semester</label>
+                    <select id="f-sem">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="f-credits">Credits</label>
+                    <select id="f-credits">
+                        <option value="">Any</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="course-list" class="course-list"></div>
+        <p id="empty-state" class="empty hidden">No courses found.</p>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/student-courses.js"></script>
+</body>
+
+</html>

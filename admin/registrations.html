@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Registrations</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="admin" data-title="Admin Console"></div>
+    <main class="container">
+        <h1 class="page-title">Student registrations</h1>
+        <p class="muted">View which students are enrolled in each course.</p>
+
+        <div class="field" style="max-width:320px; margin-bottom:1.5rem;">
+            <label for="reg-course-filter">Filter by course</label>
+            <select id="reg-course-filter">
+                <option value="">All courses</option>
+            </select>
+        </div>
+
+        <section class="card table-card">
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Course Code</th>
+                            <th>Course Title</th>
+                            <th>Registration Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reg-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/admin-registrations.js"></script>
+</body>
+
+</html>

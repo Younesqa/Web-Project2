@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Prerequisites</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="admin" data-title="Admin Console"></div>
+    <main class="container">
+        <h1 class="page-title">Manage prerequisites</h1>
+        <p class="muted">Pick a course, then add or remove prerequisites.</p>
+
+        <section class="card">
+            <div class="grid-2">
+                <div class="field">
+                    <label for="prq-course">Course</label>
+                    <select id="prq-course"></select>
+                </div>
+                <div class="field">
+                    <label for="prq-add">Add prerequisite</label>
+                    <div class="row">
+                        <select id="prq-add" class="grow"></select>
+                        <button class="btn btn-primary" id="prq-add-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <h4>Current prerequisites</h4>
+            <ul id="prq-list" class="chip-list"></ul>
+            <p id="prq-empty" class="muted small hidden">No prerequisites set for this course.</p>
+        </section>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/admin-prerequisites.js"></script>
+</body>
+
+</html>

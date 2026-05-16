@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div data-shell="student" data-title="Student Portal"></div>
+    <main class="container">
+        <h1 class="page-title">Welcome back, <span id="student-name">Student</span> 👋</h1>
+        <p class="muted">Here's a quick snapshot of your semester.</p>
+
+        <div class="stat-row" id="student-stats"></div>
+
+        <div class="grid-2">
+            <a class="card card-link" href="courses.html">
+                <header class="card-head">
+                    <h3>Browse the catalog</h3>
+                    <span class="card-arrow">→</span>
+                </header>
+                <p class="muted">Search across departments and semesters, filter by credits, and register in one click.
+                </p>
+            </a>
+            <a class="card card-link" href="registered.html">
+                <header class="card-head">
+                    <h3>My registered courses</h3>
+                    <span class="card-arrow">→</span>
+                </header>
+                <p class="muted">Review your schedule and drop a course if your plans change.</p>
+            </a>
+        </div>
+    </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/student-dashboard.js"></script>
+</body>
+
+</html>
