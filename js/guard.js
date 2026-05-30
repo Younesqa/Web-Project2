@@ -8,9 +8,9 @@
         location.href = "../index.html";
         return;
     }
-    if (!user || role !== "admin") {
-        location.replace("../login.html");
-    } else {
+    if (role !== "admin") {
+    location.replace("../login.html");
+} else {
         document.body.style.display = "block";
     }
     if (isAdminPage && role !== "admin") {
